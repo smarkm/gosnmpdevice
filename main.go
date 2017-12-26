@@ -40,6 +40,7 @@ var (
 )
 var traps = make(chan *g.SnmpPacket, 10)
 
+// bug: flush browser will scroll notification
 func hello(c echo.Context) error {
 	ws, err := upgrader.Upgrade(c.Response(), c.Request(), nil)
 	if err != nil {
